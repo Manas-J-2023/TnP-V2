@@ -57,6 +57,11 @@ export default {
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
+				nsut: {
+					red: '#e32929',
+					lightRed: '#ff5757',
+					darkRed: '#c41f1f'
+				},
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
 					foreground: 'hsl(var(--primary-foreground))'
