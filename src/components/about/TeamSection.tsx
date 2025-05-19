@@ -6,21 +6,23 @@ import {
   Card, 
   CardContent
 } from "@/components/ui/card";
+import { MapPin, Phone, Mail } from 'lucide-react';
+import { useEffect, useState } from 'react';
 
 const TeamSection = () => {
   const team = [
     {
-      name: "Dr. Samantha Miller",
-      role: "Dean of Engineering",
-      image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
-      bio: "Dr. Miller has over 20 years of experience in computer science research and education. She leads our faculty with a vision focused on innovation and excellence in technical education and research methodologies. Her leadership has transformed our engineering programs.",
+      name: "Dr. M.P.S. Bhatia",
+      role: "Training & Placement,NSUT(formerly NSIT)",
+      image: "https://test-mu-two.vercel.app/assets/MPSBhatia-CNgHXNeJ.jpeg",
+      bio: `Netaji Subhas University of Technology (Formerly, Netaji Subhas Institute of Technology) Sector-3, Dwaraka, New Delhi-110078, INDIA`,
       linkedin: "#",
       twitter: "#"
     },
     {
-      name: "Prof. James Wilson",
-      role: "Head of Research",
-      image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+      name: "Rajesh Rawat",
+      role: "Training & Placement,NSUT(formerly NSIT)",
+      image: "https://test-mu-two.vercel.app/assets/sir2-Akb8zN0G.jpeg",
       bio: "Heading our cutting-edge research initiatives, Prof. Wilson brings industry experience from his years at leading tech companies and research institutions. His work has been pivotal in establishing our university as a center for innovation and academic excellence.",
       linkedin: "#",
       twitter: "#"
@@ -72,12 +74,12 @@ const TeamSection = () => {
             >
               <Card className="overflow-hidden border-none rounded-xl shadow-xl hover:shadow-2xl transition-shadow duration-300 group h-full">
                 <div className="flex flex-col h-full">
-                  <div className="h-80 w-full overflow-hidden relative">
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-black/20 z-10"></div>
+                  <div className="aspect-[2/2] w-full overflow-hidden relative">
+                    <div className="absolute inset-0  to-black/20 z-10"></div>
                     <img 
                       src={member.image} 
                       alt={member.name} 
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      className="absolute inset-0 w-full h-full object-center object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                   </div>
                   
@@ -95,20 +97,7 @@ const TeamSection = () => {
                     </p>
                     
                     <div className="flex mt-6 pt-5 border-t border-gray-100">
-                      <a 
-                        href={member.linkedin} 
-                        className="bg-gray-100 hover:bg-red-100 text-red-600 p-3 rounded-full transition-colors mr-4"
-                        aria-label={`${member.name}'s LinkedIn profile`}
-                      >
-                        <Linkedin size={22} />
-                      </a>
-                      <a 
-                        href={member.twitter} 
-                        className="bg-gray-100 hover:bg-red-100 text-red-600 p-3 rounded-full transition-colors"
-                        aria-label={`${member.name}'s Twitter profile`}
-                      >
-                        <Twitter size={22} />
-                      </a>
+                      
                     </div>
                   </CardContent>
                 </div>
