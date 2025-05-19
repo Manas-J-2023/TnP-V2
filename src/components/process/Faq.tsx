@@ -141,16 +141,19 @@ const Faq: React.FC = () => {
             whileInView="visible"
             viewport={{ once: true, margin: "-50px" }}
           >
-            <h3 className="text-xl font-semibold mb-4">Still have questions?</h3>
-            <p className="mb-6 text-gray-600">
-              Contact the university's placement cell for further assistance.
-            </p>
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <Link to="/contact" className="nsut-red-button inline-block">Contact Us</Link>
-            </motion.div>
+            <div className="max-w-2xl mx-auto px-4">
+              <h3 className="text-xl font-semibold mb-4">Still have questions?</h3>
+              <p className="mb-10 text-gray-600">
+                Contact the university's placement cell for further assistance.
+              </p>
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="inline-block"
+              >
+                <Link to="/contact" className="nsut-red-button py-5 px-8">Contact Us</Link>
+              </motion.div>
+            </div>
           </motion.div>
         </div>
       </div>

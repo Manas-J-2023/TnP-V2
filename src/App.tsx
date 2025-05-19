@@ -12,6 +12,7 @@ import NsutLoader from "./components/NsutLoader";
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
+import ForRecruiters from "./pages/For-Recruiters";
 
 const queryClient = new QueryClient();
 
@@ -37,6 +38,7 @@ const App = () => {
               <Route path="/" element={<Index />} />
               <Route path="/about" element={<About />} />
               <Route path="/process" element={<Process />} />
+              <Route path="/for-recruiters" element={<ForRecruiters />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>

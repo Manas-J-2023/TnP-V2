@@ -32,23 +32,62 @@ const RecruitersSection = () => {
   const allLogos = [...recruiters, ...recruiters, ...recruiters];
   const allSecondRowLogos = [...secondRowRecruiters, ...secondRowRecruiters, ...secondRowRecruiters];
   
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        duration: 0.6,
+        ease: "easeOut",
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+        ease: "easeOut",
+      },
+    },
+  };
+
   return (
     <div className="py-16 bg-gray-50 border-t border-gray-100">
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-center mb-8">
+      <motion.div 
+        className="container mx-auto px-4"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3, margin: "-100px" }}
+        variants={containerVariants}
+      >
+        <motion.div 
+          className="flex items-center justify-center mb-8"
+          variants={itemVariants}
+        >
           <Briefcase className="text-red-600 mr-3 h-6 w-6" />
           <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800">
             Past <span className="text-red-600">Recruiters</span>
           </h2>
-        </div>
+        </motion.div>
         
-        <p className="text-gray-700 mb-8 max-w-3xl mx-auto text-center">
+        <motion.p 
+          className="text-gray-700 mb-8 max-w-3xl mx-auto text-center"
+          variants={itemVariants}
+        >
           Our graduates have consistently secured positions at leading technology companies worldwide.
           We take pride in our long-standing partnerships with these industry leaders who regularly recruit our talented students.
-        </p>
+        </motion.p>
         
         {/* First row continuous carousel */}
-        <div className="overflow-hidden mb-6">
+        <motion.div 
+          className="overflow-hidden mb-6"
+          variants={itemVariants}
+        >
           <div className="inline-flex whitespace-nowrap animate-[marquee_60s_linear_infinite]">
             {allLogos.map((recruiter, index) => (
               <div
@@ -65,10 +104,13 @@ const RecruitersSection = () => {
               </div>
             ))}
           </div>
-        </div>
+        </motion.div>
 
         {/* Second row carousel (reverse direction) */}
-        <div className="overflow-hidden">
+        <motion.div 
+          className="overflow-hidden"
+          variants={itemVariants}
+        >
           <div className="inline-flex whitespace-nowrap animate-[marquee-reverse_60s_linear_infinite]">
             {allSecondRowLogos.map((recruiter, index) => (
               <div
@@ -85,8 +127,8 @@ const RecruitersSection = () => {
               </div>
             ))}
           </div>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </div>
   );
 };
