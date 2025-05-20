@@ -15,6 +15,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import ForRecruiters from "./pages/For-Recruiters";
 import Contact from "./components/contact/Contact";
 import TeamShowcase from './components/TeamShowcase/TeamShowcase';
+import Pastrecruiters from "./pages/pastrecruiters";
 
 const queryClient = new QueryClient();
 
@@ -35,18 +36,20 @@ const App = () => {
         ) : (
           <BrowserRouter>
             <ScrollToTop />
-            <Navigation /> 
+            <Navigation />
             <Routes>
               <Route path="/" element={<Index />} />
               <Route path="/about" element={<About />} />
               <Route path="/process" element={<Process />} />
               <Route path="/for-recruiters" element={<ForRecruiters />} />
+              <Route path="/past-recruiters" element={<Pastrecruiters />} />
+
               <Route path="/contact" element={<Contact />} />
               <Route path="/team" element = {<TeamShowcase/>}/>
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>
-            <Footer /> 
+            <Footer />
           </BrowserRouter>
         )}
       </TooltipProvider>
