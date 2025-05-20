@@ -14,6 +14,7 @@ import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
 import ForRecruiters from "./pages/For-Recruiters";
 import Contact from "./components/contact/Contact";
+import TeamShowcase from './components/TeamShowcase/TeamShowcase';
 
 const queryClient = new QueryClient();
 
@@ -41,6 +42,7 @@ const App = () => {
               <Route path="/process" element={<Process />} />
               <Route path="/for-recruiters" element={<ForRecruiters />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/team" element = {<TeamShowcase/>}/>
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>

@@ -18,7 +18,8 @@ const Navigation: React.FC = () => {
     { name: 'Placement Process', href: '/process' },
     { name: 'Past Recruiters', href: '/past-recruiters' },
     { name: 'Placement Stats', href: '/stats' },
-    { name: 'Contact', href: '/contact' },
+    { name: 'Our team', href: '/team' },
+    { name: 'Contact us', href: '/contact' },
   ];
 
   return (
