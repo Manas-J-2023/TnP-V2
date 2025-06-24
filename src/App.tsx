@@ -16,6 +16,7 @@ import ForRecruiters from "./pages/For-Recruiters";
 import Contact from "./components/contact/Contact";
 import TeamShowcase from './components/TeamShowcase/TeamShowcase';
 import Pastrecruiters from "./pages/pastrecruiters";
+import CourseDataVisualizer from './components/stats/CourseDataVisualizer';
 
 const queryClient = new QueryClient();
 
@@ -43,6 +44,7 @@ const App = () => {
               <Route path="/process" element={<Process />} />
               <Route path="/for-recruiters" element={<ForRecruiters />} />
               <Route path="/past-recruiters" element={<Pastrecruiters />} />
+              <Route path="/stats" element = {<CourseDataVisualizer/>}/>
 
               <Route path="/contact" element={<Contact />} />
               <Route path="/team" element = {<TeamShowcase/>}/>

@@ -1,0 +1,36 @@
+.bar-chart {
+  height: 100%;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.no-data {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #6e6e73;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* Add some additional styling for chart tooltips */
+.bar-chart canvas {
+  max-width: 100%;
+}
+
+/* Chart animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.bar-chart {
+  animation: fadeIn 0.5s ease-out;
+}

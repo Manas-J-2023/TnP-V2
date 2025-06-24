@@ -1,0 +1,120 @@
+/* Year Tabs Styles */
+.year-tabs {
+  margin-bottom: 24px;
+  padding: 8px;
+  background: rgba(0, 102, 204, 0.05);
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.year-button {
+  padding: 12px 28px;
+  border: none;
+  background: transparent;
+  color: #666;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.year-button:hover {
+  background: rgba(0, 102, 204, 0.1);
+  color: #0066cc;
+}
+
+.year-button.active {
+  background: #0066cc;
+  color: white;
+  box-shadow: 0 2px 8px rgba(0, 102, 204, 0.25);
+}
+
+/* Program Tabs Styles */
+.program-tabs {
+  margin: 20px 0;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.program-button {
+  padding: 10px 20px;
+  border: none;
+  background: transparent;
+  color: #666;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.program-button::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #0066cc;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.program-button:hover {
+  color: #0066cc;
+}
+
+.program-button.active {
+  color: #0066cc;
+}
+
+.program-button.active::after {
+  transform: scaleX(1);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .year-tabs {
+    padding: 6px;
+    gap: 8px;
+  }
+
+  .year-button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .program-button {
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .year-tabs {
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .year-button {
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+
+  .program-tabs {
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding-bottom: 8px;
+  }
+
+  .program-button {
+    padding: 6px 12px;
+    font-size: 12px;
+    white-space: nowrap;
+  }
+}
